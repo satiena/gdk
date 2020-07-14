@@ -56,7 +56,8 @@ namespace sdk {
             const std::string& gait_path_hex, bool supports_csv);
 
         std::string get_challenge(const std::string& address);
-        void authenticate(const std::string& sig_der_hex, const std::string& path_hex, const std::string& device_id,
+        void authenticate(const std::string& sig_der_hex, const std::string& path_hex,
+            const std::string& gait_xpub_bip32, const std::string& root_xpub_bip32, const std::string& device_id,
             const nlohmann::json& hw_device);
         void register_subaccount_xpubs(const std::vector<std::string>& bip32_xpubs);
         void login(const std::string& mnemonic, const std::string& password);
